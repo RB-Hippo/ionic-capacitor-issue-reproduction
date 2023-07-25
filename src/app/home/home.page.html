@@ -3,21 +3,10 @@
         <ion-row>
             <ion-col size="4">
                 <div class="image-thumbnail"
-                     (click)="takePhoto()">
+                     (click)="addPhotosFromLibrary()">
                     <ion-icon name="camera" size="large"></ion-icon>
                 </div>
             </ion-col>
-            <ng-container *ngFor="let photo of photos; index as position">
-
-                <ion-col size="4">
-                    <div class="image-thumbnail">
-                      <ion-img *ngIf="!!photo"
-                          [src]="platform?.is('hybrid') ? photo.webviewPath : photo.base64">
-                      </ion-img>
-                    </div>
-                </ion-col>
-
-            </ng-container>
         </ion-row>
     </ion-grid>
 </ion-content>
